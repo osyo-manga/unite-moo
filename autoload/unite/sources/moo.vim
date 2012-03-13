@@ -15,12 +15,12 @@ function! s:source.async_gather_candidates(args, context)
 	let space = repeat(" ", self.moo__counter)
 
 	let result = [
-\'             (__)                         ',
-\'             (oo)                         ',
-\'       /------\/                          ',
-\'      / |    ||                           ',
-\'     *  /\---/\                           ',
-\'        ~~   ~~                           ',
+\'             (__)                                ',
+\'             (oo)                                ',
+\'       /------\/                                 ',
+\'      / |    ||                                  ',
+\'     *  /\---/\                                  ',
+\'        ~~   ~~                                  ',
 \    ]
 	
 	let self.moo__counter += 1
@@ -28,7 +28,7 @@ function! s:source.async_gather_candidates(args, context)
 		let self.moo__counter = 0
 	endif
 	return map(result, '{
-\		"word" : (space.v:val)[20 : winwidth("%")+10]
+\		"word" : (space.v:val)[20 : winwidth("%")+5]
 \	}') + [{ "word" : '    ...."Have you mooed today?"...' }]
 endfunction
 
